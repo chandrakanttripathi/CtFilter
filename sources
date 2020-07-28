@@ -1,0 +1,31 @@
+TARGETNAME=CtFilter
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+
+MSC_WARNING_LEVEL=/W0
+
+# check for build environment
+!if ("$(DDKBUILDENV)"=="chk")
+TARGETPATH=.\bin\debug\ctminifilter
+!else
+TARGETPATH=.\bin\release\ctminifilter
+!endif 
+
+TARGETLIBS= $(TARGETLIBS) \
+            $(IFSKIT_LIB_PATH)\fltMgr.lib
+
+
+C_DEFINES = $(C_DEFINES) /DSHA1_NO_UTILITY_FUNCTIONS /DKERNEL_MODE /DSHA1_LITTLE_ENDIAN
+
+SOURCES= \
+ 		CtFilter.rc \
+ 		CtFilter.c \
+		FileSignature.c \
+		SHA1.c \
+		RegistrationData.c \
+		Operations.c \
+		ProcessHandler.c  
+
+		
+
+
