@@ -1,2 +1,2 @@
 # CtFilter
-Mini Filter driver for scanning signature of specific executable files 
+File System Mini Filter driver for scanning signature of executing binaries in Windows 
