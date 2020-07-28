@@ -1,6 +1,7 @@
 # CtFilter
 Mini Filter driver for filtering executing binary based on signature.
-
+Installation process and execution can be seen in below URL
+https://www.screencast.com/t/fNL4jtbmbAjc
 
 Currently this code is tested with Windows 7.
 Environment:
